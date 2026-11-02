@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WMYPO Holiday Party 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:    #0B3823;
+  --forest2:   #145230;
+  --gold:      #C09A3A;
+  --gold-dk:   #8B6914;
+  --gold-lt:   #FEF3C7;
+  --gold-md:   #F5E6B8;
+  --cream:     #FBF8F2;
+  --paper:     #FFFFFF;
+  --ink:       #1A1A1A;
+  --ink2:      #3D3D3D;
+  --muted:     #7A7A6A;
+  --border:    #E4DDD0;
+  --amber:     #B8620A; --amber-lt: #FEF0DC;
+  --green:     #1A6B3C; --green-lt: #E2F4EB;
+  --blue:      #1A4FAF; --blue-lt:  #E3EDFF;
+  --purple:    #5B2D9E; --purple-lt: #F0EAFF;
+  --cubs-blue: #0E3386; --cubs-red: #CC3433;
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'DM Sans',-apple-system,sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; }
+
+/* ── SNOWFLAKES ── */
+@keyframes drift { 0%{transform:translateY(0) rotate(0deg);opacity:0} 10%{opacity:.6} 90%{opacity:.3} 100%{transform:translateY(110vh) rotate(360deg);opacity:0} }
+.snow-wrap { position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden; }
+.flake { position:absolute;top:-20px;color:rgba(255,255,255,.55);font-size:14px;animation:drift linear infinite;user-select:none; }
+
+/* ── HERO ── */
+.hero { background:var(--forest);padding:60px 48px 52px;position:relative;overflow:hidden;border-bottom:4px solid var(--gold); }
+.hero::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 90% 50%,rgba(192,154,58,.1) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 10% 80%,rgba(27,107,58,.25) 0%,transparent 60%);pointer-events:none; }
+.hero-eyebrow { font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px; }
+.hero-eyebrow::before,.hero-eyebrow::after { content:'✦';font-size:9px; }
+.hero h1 { font-family:'Playfair Display',Georgia,serif;font-size:52px;font-weight:700;color:#fff;line-height:1.08;margin-bottom:8px;max-width:700px; }
+.hero-year { font-family:'Playfair Display',serif;font-size:52px;font-weight:400;font-style:italic;color:var(--gold); }
+.hero-date { font-size:15px;color:rgba(255,255,255,.6);margin-top:14px;margin-bottom:12px;font-weight:300; }
+.hero-tagline { font-size:15px;color:rgba(255,255,255,.8);margin-bottom:28px;font-style:italic; }
+.hero-nav { display:flex;flex-wrap:wrap;gap:10px; }
+.hero-nav a { display:inline-flex;align-items:center;gap:7px;padding:8px 18px;border-radius:100px;font-size:12px;font-weight:500;border:1px solid;text-decoration:none;transition:opacity .2s; }
+.hero-nav a:hover { opacity:.8; }
+.nav-amber  { background:rgba(184,98,10,.18);color:#FBBF24;border-color:rgba(184,98,10,.4); }
+.nav-green  { background:rgba(26,107,60,.22);color:#6EE7A0;border-color:rgba(26,107,60,.4); }
+.nav-blue   { background:rgba(26,79,175,.22);color:#93C5FD;border-color:rgba(26,79,175,.4); }
+.nav-purple { background:rgba(91,45,158,.22);color:#C4B5FD;border-color:rgba(91,45,158,.4); }
+
+/* ── LEGEND ── */
+.legend { background:var(--forest2);padding:14px 48px;display:flex;align-items:center;gap:6px;flex-wrap:wrap; }
+.legend-head { font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:8px; }
+.badge { display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:500;margin-right:6px; }
+.b-lunch  { background:#E2F4EB;color:#1A6B3C; }
+.b-tv     { background:#E3EDFF;color:#1A4FAF; }
+.b-star   { background:#FEF0DC;color:#B8620A; }
+.b-bonus  { background:#F0EAFF;color:#5B2D9E; }
+.b-ypo    { background:var(--gold-lt);color:var(--gold-dk);border:1px solid var(--gold); }
+
+/* ── MAIN ── */
+.main { max-width:860px;margin:0 auto;padding:52px 40px 80px;position:relative;z-index:1; }
+
+/* ── NEIGHBORHOOD ── */
+.nbhd { margin-bottom:64px; }
+.nbhd-head { display:flex;align-items:flex-start;gap:16px;padding:22px 28px;border-radius:14px 14px 0 0; }
+.nbhd-num { width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:20px;font-weight:600;flex-shrink:0;margin-top:2px; }
+.nbhd-name { font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:600;line-height:1.2;margin-bottom:4px; }
+.nbhd-tagline { font-size:13px;font-style:italic;opacity:.72; }
+.t-amber .nbhd-head { background:linear-gradient(135deg,#3D1F03 0%,#5C2E05 100%);color:#FBBF24; }
+.t-amber .nbhd-num  { background:rgba(251,191,36,.18);color:#FBBF24; }
+.t-green  .nbhd-head { background:linear-gradient(135deg,#052A14 0%,#0A4121 100%);color:#6EE7A0; }
+.t-green  .nbhd-num  { background:rgba(110,231,160,.18);color:#6EE7A0; }
+.t-blue   .nbhd-head { background:linear-gradient(135deg,#0A1B4A 0%,#122B6E 100%);color:#93C5FD; }
+.t-blue   .nbhd-num  { background:rgba(147,197,253,.18);color:#93C5FD; }
+.t-purple .nbhd-head { background:linear-gradient(135deg,#1E0B45 0%,#2F1269 100%);color:#C4B5FD; }
+.t-purple .nbhd-num  { background:rgba(196,181,253,.18);color:#C4B5FD; }
+.nbhd-stack { border:1px solid var(--border);border-top:none;border-radius:0 0 14px 14px;overflow:hidden; }
+
+/* ── CARDS ── */
+.info-card { background:var(--paper);border-bottom:1px solid var(--border); }
+.info-card:last-child { border-bottom:none; }
+.card-top { padding:16px 24px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;background:var(--cream); }
+.card-icon { font-size:15px; }
+.card-label { font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted); }
+.card-body { padding:20px 24px; }
+
+/* ── STOPS ── */
+.stop { display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border); }
+.stop:first-child { padding-top:0; }
+.stop:last-child  { border-bottom:none;padding-bottom:0; }
+.stop.stop-ypo { border-left:3px solid var(--gold);padding-left:12px;margin-left:-3px;background:linear-gradient(to right,#FFFBEF,transparent 60%); }
+.stop-track { display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0;width:24px;padding-top:3px; }
+.stop-circle { width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0; }
+.stop-line { width:1px;flex:1;min-height:16px;background:var(--border); }
+.stop-body { flex:1;min-width:0; }
+.stop-kicker { font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px; }
+.stop-name  { font-size:15px;font-weight:500;color:var(--ink);margin-bottom:2px; }
+.stop-addr  { font-size:11px;color:var(--muted);margin-bottom:6px; }
+.stop-desc  { font-size:13px;color:var(--ink2);line-height:1.6;margin-bottom:7px; }
+.stop-badges { display:flex;flex-wrap:wrap;gap:4px; }
+.t-amber .stop-circle { background:var(--amber-lt);color:var(--amber); }
+.t-green  .stop-circle { background:var(--green-lt);color:var(--green); }
+.t-blue   .stop-circle { background:var(--blue-lt);color:var(--blue); }
+.t-purple .stop-circle { background:var(--purple-lt);color:var(--purple); }
+.stop-ypo .stop-circle { background:var(--gold-lt);color:var(--gold-dk); }
+
+/* ── SHOPPING ── */
+.shop-row { display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);align-items:flex-start; }
+.shop-row:first-child { padding-top:0; }
+.shop-row:last-child  { border-bottom:none;padding-bottom:0; }
+.shop-bullet { width:6px;height:6px;border-radius:50%;background:var(--border);flex-shrink:0;margin-top:6px; }
+.shop-name { font-size:14px;font-weight:500;color:var(--ink);line-height:1.3; }
+.shop-desc { font-size:12px;color:var(--muted);margin-top:2px;line-height:1.5; }
+
+/* ── ACTIVITIES ── */
+.activity-primary { background:var(--cream);border-radius:10px;border:1px solid var(--border);overflow:hidden;margin-bottom:14px; }
+.activity-primary.act-ypo { border-color:var(--gold);background:#FFFBEF; }
+.act-head { padding:12px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px; }
+.act-ypo .act-head { background:var(--gold-lt);border-bottom-color:var(--gold-md); }
+.act-type-tag { font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:100px; }
+.act-name { font-family:'Playfair Display',serif;font-size:19px;font-weight:600;line-height:1.2;margin-bottom:3px; }
+.act-addr { font-size:11px;color:var(--muted);margin-bottom:10px; }
+.act-desc { font-size:13px;color:var(--ink2);line-height:1.65; }
+.act-body { padding:14px 18px; }
+.act-meta { padding:12px 18px;background:var(--paper);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:6px; }
+.meta-row { display:flex;gap:10px;font-size:12px;color:var(--ink2);align-items:flex-start; }
+.meta-key { font-weight:500;color:var(--ink);min-width:62px;flex-shrink:0; }
+.bonus-row { display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start; }
+.bonus-row:last-child { border-bottom:none;padding-bottom:0; }
+.bonus-row:first-child { padding-top:0; }
+.bonus-dot { width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:5px; }
+.bonus-name { font-size:14px;font-weight:500;color:var(--ink);margin-bottom:2px; }
+.bonus-addr { font-size:11px;color:var(--muted);margin-bottom:4px; }
+.bonus-desc { font-size:12px;color:var(--ink2);line-height:1.55; }
+.t-amber .act-type-tag { background:var(--amber-lt);color:var(--amber); }
+.t-amber .act-name { color:var(--amber); }
+.t-amber .bonus-dot { background:var(--amber); }
+.t-green  .act-type-tag { background:var(--green-lt);color:var(--green); }
+.t-green  .act-name { color:var(--green); }
+.t-green  .bonus-dot { background:var(--green); }
+.t-blue   .act-type-tag { background:var(--blue-lt);color:var(--blue); }
+.t-blue   .act-name { color:var(--blue); }
+.t-blue   .bonus-dot { background:var(--blue); }
+.t-purple .act-type-tag { background:var(--purple-lt);color:var(--purple); }
+.t-purple .act-name { color:var(--purple); }
+.t-purple .bonus-dot { background:var(--purple); }
+.act-ypo .act-type-tag { background:var(--gold-dk);color:#fff; }
+.act-ypo .act-name { color:var(--gold-dk); }
+
+/* ── CHRISTMAS NOTE ── */
+.xmas-note { background:linear-gradient(135deg,var(--forest) 0%,var(--forest2) 100%);border-radius:0 0 13px 13px;padding:16px 24px;display:flex;gap:14px;align-items:flex-start;border-top:2px solid var(--gold); }
+.xmas-note-icon { font-size:18px;flex-shrink:0;margin-top:2px; }
+.xmas-note-text { font-size:13px;color:rgba(200,240,215,.85);line-height:1.65; }
+.xmas-note-text strong { color:#fff;font-weight:500; }
+
+/* ── SECTION DIVIDER ── */
+.section-divider { display:flex;align-items:center;gap:16px;margin:0 0 48px;color:var(--gold);font-size:13px;letter-spacing:.1em;text-transform:uppercase; }
+.section-divider::before,.section-divider::after { content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent); }
+
+/* ── PARTNER SPOTLIGHT ── */
+.partner-section { margin-bottom:64px; }
+.partner-heading { display:flex;align-items:center;gap:16px;margin-bottom:32px;color:var(--forest);font-size:13px;letter-spacing:.1em;text-transform:uppercase; }
+.partner-heading::before,.partner-heading::after { content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent); }
+.partner-grid { display:grid;grid-template-columns:1fr 1fr;gap:24px; }
+@media(max-width:680px){ .partner-grid { grid-template-columns:1fr; } }
+
+.partner-card { border-radius:14px;overflow:hidden;border:1px solid var(--border); }
+.partner-card-head { padding:22px 28px 18px; }
+.partner-card-eyebrow { font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px; }
+.partner-card-name { font-family:'Playfair Display',serif;font-size:26px;font-weight:700;line-height:1.1;margin-bottom:4px; }
+.partner-card-role { font-size:13px;font-style:italic;opacity:.75; }
+
+.partner-card.leye .partner-card-head { background:linear-gradient(135deg,#0A1F10 0%,#143D1E 100%);color:#6EE7A0; }
+.partner-card.leye .partner-card-name { color:#fff; }
+.partner-card.cubs .partner-card-head { background:linear-gradient(135deg,#071A3A 0%,#0E2D5E 100%);color:#93C5FD; }
+.partner-card.cubs .partner-card-name { color:#fff; }
+
+.partner-card-body { padding:20px 24px;background:var(--paper); }
+
+.ypo-callout { display:flex;align-items:flex-start;gap:10px;background:var(--gold-lt);border:1px solid var(--gold-md);border-radius:8px;padding:10px 14px;margin-bottom:16px; }
+.ypo-callout-star { font-size:14px;color:var(--gold-dk);flex-shrink:0;margin-top:1px; }
+.ypo-callout-text { font-size:12px;color:var(--gold-dk);font-weight:500;line-height:1.5; }
+
+.partner-facts { display:flex;flex-direction:column;gap:6px;margin-bottom:16px; }
+.partner-fact { display:flex;gap:12px;font-size:12px;align-items:flex-start; }
+.fact-label { font-weight:500;color:var(--muted);min-width:70px;flex-shrink:0;text-transform:uppercase;font-size:10px;letter-spacing:.05em;padding-top:1px; }
+.fact-value { color:var(--ink2);line-height:1.5; }
+
+.partner-bio { font-size:13px;color:var(--ink2);line-height:1.7; }
+.partner-bio p { margin-bottom:10px; }
+.partner-bio p:last-child { margin-bottom:0; }
+
+.partner-highlights { margin-top:16px; }
+.partner-highlights-label { font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px; }
+.highlight-item { display:flex;gap:8px;font-size:12px;color:var(--ink2);padding:4px 0;border-bottom:1px solid var(--border);align-items:flex-start; }
+.highlight-item:last-child { border-bottom:none; }
+.highlight-dot { width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:5px; }
+
+.leye .highlight-dot { background:var(--gold); }
+.cubs .highlight-dot { background:var(--cubs-red); }
+.leye .ypo-callout { border-color:var(--gold); }
+.cubs .ypo-callout { background:#E8EDF8;border-color:var(--cubs-blue); }
+.cubs .ypo-callout-star { color:var(--cubs-blue); }
+.cubs .ypo-callout-text { color:var(--cubs-blue); }
+
+/* ── FOOTER ── */
+footer { background:var(--forest);border-top:3px solid var(--gold);padding:36px 48px;text-align:center;position:relative;z-index:1; }
+.footer-ornament { font-size:22px;margin-bottom:10px;letter-spacing:8px; }
+.footer-title { font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--gold);margin-bottom:10px; }
+footer p { font-size:12px;color:rgba(255,255,255,.45);line-height:1.9;max-width:600px;margin:0 auto; }
+
+/* ── Phone and safe-area adjustments ── */
+:root { --gutter: clamp(16px, 5vw, 48px); }
+.hero, .legend, footer, .main {
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.main { padding-top: 44px; padding-bottom: 64px; }
+.hero { padding-top: 48px; padding-bottom: 44px; }
+.hero h1 { font-size: clamp(36px, 10vw, 52px); }
+.hero-year { font-size: clamp(36px, 10vw, 52px); }
+.hero-nav a { padding: 8px 14px; }
+.nbhd-head { padding: 20px max(16px, 3vw); gap: 12px; }
+.nbhd-name { font-size: clamp(19px, 5.4vw, 24px); }
+.nbhd-head > div { min-width: 0; }
+.card-top, .card-body { padding-left: clamp(14px, 4vw, 24px); padding-right: clamp(14px, 4vw, 24px); }
+.xmas-note { padding-left: clamp(14px, 4vw, 24px); padding-right: clamp(14px, 4vw, 24px); }
+.stop-body, .shop-row > div, .bonus-row > div, .act-body, .meta-row > span:last-child { min-width: 0; }
+.meta-row { flex-wrap: wrap; row-gap: 2px; }
+.partner-card-name { font-size: clamp(22px, 6vw, 26px); }
+.partner-card-head, .partner-card-body { padding-left: clamp(16px, 4vw, 24px); padding-right: clamp(16px, 4vw, 24px); }
+.partner-fact { flex-wrap: wrap; row-gap: 2px; }
+.partner-grid > * { min-width: 0; }
+@media (max-width: 480px) {
+  .fact-label { min-width: 0; width: 100%; }
+  .stop.stop-ypo { padding-left: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .flake { animation: none; opacity: 0; } }
+</style>
+</head>
+<body>
+<!-- Snowflakes -->
+<div class="snow-wrap" aria-hidden="true">
+  <span class="flake" style="left:5%;font-size:12px;animation-duration:9s;animation-delay:0s">❄</span>
+  <span class="flake" style="left:12%;font-size:8px;animation-duration:11s;animation-delay:1.5s">❅</span>
+  <span class="flake" style="left:21%;font-size:14px;animation-duration:8s;animation-delay:3s">❄</span>
+  <span class="flake" style="left:33%;font-size:9px;animation-duration:13s;animation-delay:.8s">❅</span>
+  <span class="flake" style="left:42%;font-size:11px;animation-duration:10s;animation-delay:2.2s">❄</span>
+  <span class="flake" style="left:55%;font-size:7px;animation-duration:12s;animation-delay:4s">❅</span>
+  <span class="flake" style="left:64%;font-size:13px;animation-duration:9.5s;animation-delay:1s">❄</span>
+  <span class="flake" style="left:73%;font-size:10px;animation-duration:11.5s;animation-delay:2.8s">❅</span>
+  <span class="flake" style="left:82%;font-size:8px;animation-duration:8.5s;animation-delay:.3s">❄</span>
+  <span class="flake" style="left:91%;font-size:12px;animation-duration:10.5s;animation-delay:3.5s">❅</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Western Michigan YPO</div>
+  <h1>Holiday Party<br><span class="hero-year">2026</span></h1>
+  <div class="hero-date">Saturday, December 5, 2026 &nbsp;·&nbsp; Chicago, Illinois &nbsp;·&nbsp; 11am – 4pm</div>
+  <p class="hero-tagline">Explore the neighborhoods of Chicago.</p>
+  <nav class="hero-nav">
+    <a class="nav-amber" href="#nbhd1">① Ukrainian Village / Wicker Park</a>
+    <a class="nav-green"  href="#nbhd2">② Lincoln Park / Armitage</a>
+    <a class="nav-blue"   href="#nbhd3">③ Lakeview / Wrigleyville</a>
+    <a class="nav-purple" href="#nbhd4">④ Old Town / Gold Coast</a>
+  </nav>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <span class="legend-head">Key</span>
+  <span class="badge b-lunch">🍽 Lunch stop</span>
+  <span class="badge b-tv">📺 Game viewing</span>
+  <span class="badge b-star">⭐ Unique spot</span>
+  <span class="badge b-bonus">✦ Bonus activity</span>
+  <span class="badge b-ypo">★ YPO Member Owned</span>
+</div>
+
+<div class="main">
+
+<!-- ① UKRAINIAN VILLAGE / WICKER PARK / BUCKTOWN -->
+<div class="nbhd t-amber" id="nbhd1">
+  <div class="nbhd-head">
+    <div class="nbhd-num">①</div>
+    <div>
+      <div class="nbhd-name">Ukrainian Village / Wicker Park / Bucktown</div>
+      <div class="nbhd-tagline">"Murals, Margaritas &amp; the Soul of the City"</div>
+    </div>
+  </div>
+  <div class="nbhd-stack">
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🥂</span><span class="card-label">Culinary &amp; Spirits Tour</span></div>
+      <div class="card-body">
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">1</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">11am — Warm-up</div>
+            <div class="stop-name">TRUCE</div>
+            <div class="stop-addr">1935 N Damen Ave, Bucktown &nbsp;·&nbsp; Opens 8am</div>
+            <div class="stop-desc">Coffee-to-cocktail concept, 4.9★. Seasonal craft drinks, owner-operated, intimate. The perfect way to ease into the day before shopping opens up.</div>
+            <div class="stop-badges"><span class="badge b-star">⭐ Unique spot</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">2</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">12pm — Lunch</div>
+            <div class="stop-name">Big Star</div>
+            <div class="stop-addr">1531 N Damen Ave, Wicker Park</div>
+            <div class="stop-desc">Chicago's most iconic taco bar. Birria tacos, spicy margaritas, a legendary bar patio. This is Wicker Park distilled into a single experience. Bar TVs for game viewing.</div>
+            <div class="stop-badges"><span class="badge b-lunch">🍽 Lunch</span><span class="badge b-tv">📺 TVs</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">3</div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">2:30pm</div>
+            <div class="stop-name">Desert Hawk</div>
+            <div class="stop-addr">2049 W Division St, Ukrainian Village</div>
+            <div class="stop-desc">Possibly Chicago's best smash burger alongside Filipino-inspired street food by Chef David. Craft cocktails, 4.7★, deep neighborhood credibility. The real surprise of the afternoon.</div>
+            <div class="stop-badges"><span class="badge b-star">⭐ Unique spot</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🛍</span><span class="card-label">Shopping</span></div>
+      <div class="card-body">
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Una Mae's</div><div class="shop-desc">1528 N Milwaukee Ave — Curated indie clothing and accessories, whimsical but well-designed. Opens 12pm.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">AKIRA</div><div class="shop-desc">1814 W North Ave — Elevated women's fashion, shoes, and accessories. Opens 11am.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Penelope's</div><div class="shop-desc">1913 W Division St — Women's boutique + home goods. Vibrant, eclectic, very neighborhood.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Flatiron Arts Building</div><div class="shop-desc">1579 N Milwaukee — Chicago's version of the NYC Flatiron. Independent artist studios — great walk-through.</div></div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🎯</span><span class="card-label">Activities</span></div>
+      <div class="card-body">
+        <div class="activity-primary">
+          <div class="act-head"><span class="act-type-tag">Featured activity</span></div>
+          <div class="act-body">
+            <div class="act-name">WhirlyBall</div>
+            <div class="act-addr">1825 W Webster Ave, Bucktown</div>
+            <div class="act-desc">Bumper cars meets lacrosse — teams compete head-to-head in enclosed courts. The most fun group activity in Chicago for competitive types. Full bar, referees, 60–90 min sessions. Fully indoors and heated, ideal for December.</div>
+          </div>
+          <div class="act-meta">
+            <div class="meta-row"><span class="meta-key">Hours</span><span>Open Sat 11am – midnight</span></div>
+            <div class="meta-row"><span class="meta-key">Reserve</span><span>whirlyball.com — group sessions fill fast on Saturdays</span></div>
+          </div>
+        </div>
+        <div class="bonus-row"><div class="bonus-dot"></div><div>
+          <div class="bonus-name">Ukrainian Institute of Modern Art <span class="badge b-bonus" style="vertical-align:middle;margin-left:6px">✦ Bonus</span></div>
+          <div class="bonus-addr">2320 W Chicago Ave &nbsp;·&nbsp; $5 &nbsp;·&nbsp; Wed–Sun noon–4pm</div>
+          <div class="bonus-desc">Intimate gallery space, 4.8★. Rotating exhibits in a beautifully restored historic space. A genuine discovery — not tourist Chicago. Pairs naturally with the Desert Hawk stop nearby.</div>
+        </div></div>
+      </div>
+    </div>
+    <div class="xmas-note">
+      <div class="xmas-note-icon">🎄</div>
+      <div class="xmas-note-text"><strong>December note:</strong> Division St and Damen Ave are beautifully lit. The six-corners at Milwaukee/North/Damen is one of Chicago's best holiday photo spots. WhirlyBall is heated — ideal for a cold December afternoon.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">✦ &nbsp; &nbsp; ✦ &nbsp; &nbsp; ✦</div>
+
+<!-- ② LINCOLN PARK / ARMITAGE — LEYE YPO OWNED -->
+<div class="nbhd t-green" id="nbhd2">
+  <div class="nbhd-head">
+    <div class="nbhd-num">②</div>
+    <div>
+      <div class="nbhd-name">Lincoln Park / Armitage Avenue</div>
+      <div class="nbhd-tagline">"Chicago's Most Beautiful Block, Dressed for Christmas"</div>
+    </div>
+  </div>
+  <div class="nbhd-stack">
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🥂</span><span class="card-label">Culinary &amp; Spirits Tour &nbsp;·&nbsp; <span style="color:var(--gold-dk);font-weight:600">★ All stops YPO Member Owned — Lettuce Entertain You</span></span></div>
+      <div class="card-body">
+        <div class="stop stop-ypo">
+          <div class="stop-track"><div class="stop-circle">1</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">11am — Lunch</div>
+            <div class="stop-name">Café Ba-Ba-Reeba</div>
+            <div class="stop-addr">2024 N Halsted St, Lincoln Park</div>
+            <div class="stop-desc">Lettuce's beloved Lincoln Park tapas institution since 1982. Crispy patatas bravas, world-class sangria, and a buzzing social scene that has packed tables for over 40 years.</div>
+            <div class="stop-badges"><span class="badge b-lunch">🍽 Lunch</span><span class="badge b-ypo">★ YPO Member Owned</span></div>
+          </div>
+        </div>
+        <div class="stop stop-ypo">
+          <div class="stop-track"><div class="stop-circle">2</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">1:30pm</div>
+            <div class="stop-name">R.J. Grunts</div>
+            <div class="stop-addr">2056 N Lincoln Ave, Lincoln Park</div>
+            <div class="stop-desc">The very first Lettuce Entertain You restaurant, open since 1971. Legendary burgers, an iconic salad bar, and the easy neighborhood energy that started it all.</div>
+            <div class="stop-badges"><span class="badge b-ypo">★ YPO Member Owned</span><span class="badge b-star">⭐ First LEYE restaurant</span></div>
+          </div>
+        </div>
+        <div class="stop stop-ypo">
+          <div class="stop-track"><div class="stop-circle">3</div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">3pm</div>
+            <div class="stop-name">Summer House Santa Monica</div>
+            <div class="stop-addr">1954 N Halsted St, Lincoln Park</div>
+            <div class="stop-desc">California-casual all-day dining with a beautiful airy interior. Farm-fresh salads, fish tacos, and house cocktails. The best Lincoln Park afternoon drink stop.</div>
+            <div class="stop-badges"><span class="badge b-tv">📺 TVs</span><span class="badge b-ypo">★ YPO Member Owned</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🛍</span><span class="card-label">Shopping · Armitage corridor</span></div>
+      <div class="card-body">
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">art effect</div><div class="shop-desc">934 W Armitage — Eclectic gifts, jewelry, and women's clothing. The anchor boutique of the strip. Opens 11am.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Peruvian Connection</div><div class="shop-desc">925 W Armitage — Luxury Alpaca knitwear and timeless women's pieces. Premium quality, beautiful fabrics.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Lost Soul Found</div><div class="shop-desc">1017 W Armitage — Boutique clothing + excellent house-made coffee. Shabby-chic, creative energy. Opens 10am.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">The full Armitage strip</div><div class="shop-desc">Halsted to Sheffield — Chicago's best walkable boutique mile. Home goods, jewelry, and independent cafés throughout.</div></div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🎯</span><span class="card-label">Activities</span></div>
+      <div class="card-body">
+        <div class="activity-primary">
+          <div class="act-head"><span class="act-type-tag">Featured activity</span></div>
+          <div class="act-body">
+            <div class="act-name">Lincoln Park Zoo</div>
+            <div class="act-addr">2001 N Clark St &nbsp;·&nbsp; 15-min walk from Armitage</div>
+            <div class="act-desc">One of the last free zoos in the country. Winter is a wonderful time to visit — fewer crowds and the animal buildings are warm sanctuaries. A beautiful walk from the Armitage strip.</div>
+          </div>
+          <div class="act-meta">
+            <div class="meta-row"><span class="meta-key">Hours</span><span>FREE · Open 8am–5pm Saturday — no ticket required</span></div>
+            <div class="meta-row"><span class="meta-key">Tip</span><span>The Kovler Lion House and Regenstein African Journey are perfect warm-up stops</span></div>
+          </div>
+        </div>
+        <div class="bonus-row"><div class="bonus-dot"></div><div>
+          <div class="bonus-name">Chicago History Museum <span class="badge b-bonus" style="vertical-align:middle;margin-left:6px">✦ Bonus</span></div>
+          <div class="bonus-addr">1601 N Clark St &nbsp;·&nbsp; $25 &nbsp;·&nbsp; Open Sat 9:30am–4:30pm</div>
+          <div class="bonus-desc">Excellent and surprisingly engaging museum, 4.6★. Covers Chicago from the Great Fire to the 20th century. Adjacent to Lincoln Park Zoo — easy to pair both in the same afternoon.</div>
+        </div></div>
+      </div>
+    </div>
+    <div class="xmas-note">
+      <div class="xmas-note-icon">🎄</div>
+      <div class="xmas-note-text"><strong>December note:</strong> Armitage Ave between Halsted &amp; Sheffield is Chicago's most picturesque block in December — brownstones, window boxes, and ivy all in holiday lights. <strong>All three Culinary &amp; Spirits stops are Lettuce Entertain You</strong> — the family-owned restaurant group led by YPO Chicago member R.J. Melman. See Partner Spotlight below.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">✦ &nbsp; &nbsp; ✦ &nbsp; &nbsp; ✦</div>
+
+<!-- ③ LAKEVIEW / WRIGLEYVILLE / SOUTHPORT -->
+<div class="nbhd t-blue" id="nbhd3">
+  <div class="nbhd-head">
+    <div class="nbhd-num">③</div>
+    <div>
+      <div class="nbhd-name">Lakeview / Wrigleyville / Southport</div>
+      <div class="nbhd-tagline">"Cubs Country at Christmas — Where Ivy Meets Tinsel"</div>
+    </div>
+  </div>
+  <div class="nbhd-stack">
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🥂</span><span class="card-label">Culinary &amp; Spirits Tour</span></div>
+      <div class="card-body">
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">1</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">12pm — Lunch · After Wrigley Tour</div>
+            <div class="stop-name">Little Goat Diner</div>
+            <div class="stop-addr">3325 N Southport Ave &nbsp;·&nbsp; Reserve ahead</div>
+            <div class="stop-desc">Stephanie Izard's Southport outpost — one of Chicago's most celebrated chefs. 4.7★ across 10,000+ reviews. Elvis pancakes, the patty melt, house cocktails. Reserve ahead — this fills up on Saturdays.</div>
+            <div class="stop-badges"><span class="badge b-lunch">🍽 Lunch</span><span class="badge b-star">⭐ Celebrity chef</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">2</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">1:30pm</div>
+            <div class="stop-name">Toons Bar &amp; Grill</div>
+            <div class="stop-addr">3857 N Southport Ave &nbsp;·&nbsp; Opens 11am</div>
+            <div class="stop-desc">Pure Chicago neighborhood sports bar. Legendary wings, walls of TVs, great beer selection. 4.5★, opens 11am. The kind of genuinely local spot that doesn't exist in River North — regulars, barstools, and game day energy every day.</div>
+            <div class="stop-badges"><span class="badge b-tv">📺 Best TVs on this route</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">3</div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">3pm</div>
+            <div class="stop-name">Budweiser Brickhouse Tavern</div>
+            <div class="stop-addr">3647 N Clark St, Wrigleyville</div>
+            <div class="stop-desc">Right in Wrigley's shadow. 4.7★. Multiple TVs, classic Chicago dogs, solid apps. Walk out the door and the Friendly Confines is half a block north. The perfect Southport-to-Wrigleyville transition.</div>
+            <div class="stop-badges"><span class="badge b-tv">📺 TVs</span><span class="badge b-star">⭐ Wrigley-adjacent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🛍</span><span class="card-label">Shopping · Southport corridor</span></div>
+      <div class="card-body">
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Alice &amp; Wonder</div><div class="shop-desc">3542 N Southport — Chicago-themed boutique, 4.9★. Custom patch hats and locally-made gifts. The best "I was in Chicago" souvenir that doesn't look like airport merch.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Batik Chicago</div><div class="shop-desc">3746 N Southport — Vibrant resort-wear boutique. Zimmermann-adjacent prints, owner-operated. Open Wed–Sat.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Southport Grocery &amp; Café</div><div class="shop-desc">3552 N Southport — Gourmet grocery and café. Exceptional pancakes, artisan pantry items worth browsing. Closes 3pm.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Bombastic Café</div><div class="shop-desc">3732 N Southport — House-roasted coffee, indie art vibe. Perfect afternoon pitstop between boutiques.</div></div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🎯</span><span class="card-label">Activities · Start at 10am before lunch</span></div>
+      <div class="card-body">
+        <div class="activity-primary act-ypo">
+          <div class="act-head"><span class="act-type-tag">★ YPO Member Owned · Featured Activity</span></div>
+          <div class="act-body">
+            <div class="act-name">Wrigley Field Ballpark Tour</div>
+            <div class="act-addr">1060 W Addison St, Wrigleyville</div>
+            <div class="act-desc">The best 90-minute activity available to any Chicago visitor. Guided tours give access to the Cubs dugout, the warning track, the legendary ivy, and the press box. Consistently called a bucket-list experience — for baseball fans and non-fans alike. Start at 10am, then walk to Little Goat for lunch. <strong>The Chicago Cubs are owned by YPO member Tom Ricketts — see Partner Spotlight below.</strong></div>
+          </div>
+          <div class="act-meta">
+            <div class="meta-row"><span class="meta-key">Timing</span><span>10am — before lunch at Little Goat</span></div>
+            <div class="meta-row"><span class="meta-key">Reserve</span><span>mlb.com/cubs/ballpark — confirm Dec 5 availability, book in advance</span></div>
+            <div class="meta-row"><span class="meta-key">Duration</span><span>~90 minutes guided</span></div>
+          </div>
+        </div>
+        <div class="bonus-row"><div class="bonus-dot"></div><div>
+          <div class="bonus-name">Christkindlmarket at Gallagher Way <span class="badge b-bonus" style="vertical-align:middle;margin-left:6px">✦ Bonus</span></div>
+          <div class="bonus-addr">3610 N Clark St &nbsp;·&nbsp; FREE &nbsp;·&nbsp; Daily through Dec 31</div>
+          <div class="bonus-desc">German-style market set against the Wrigley Field marquee — one of the most uniquely Chicago holiday experiences available. 25+ vendors, Glühwein in signature collectible mugs, hand-crafted gifts, roasted nuts, bratwurst, and an outdoor ice skating rink. Walk straight out of Brickhouse Tavern.</div>
+        </div></div>
+      </div>
+    </div>
+    <div class="xmas-note">
+      <div class="xmas-note-icon">🎄</div>
+      <div class="xmas-note-text"><strong>December note:</strong> Southport storefronts go all-out on holiday window displays. Wrigley Field is lit all December. <strong>Flow:</strong> 10am Wrigley Tour (YPO-owned!) → 12pm Little Goat → 1:30pm Toons → 3pm Brickhouse → Christkindlmarket. Entire route is walkable.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">✦ &nbsp; &nbsp; ✦ &nbsp; &nbsp; ✦</div>
+
+<!-- ④ OLD TOWN / GOLD COAST -->
+<div class="nbhd t-purple" id="nbhd4">
+  <div class="nbhd-head">
+    <div class="nbhd-num">④</div>
+    <div>
+      <div class="nbhd-name">Old Town / Gold Coast</div>
+      <div class="nbhd-tagline">"Old Wells, New Energy &amp; Christmas on the Magnificent Mile"</div>
+    </div>
+  </div>
+  <div class="nbhd-stack">
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🥂</span><span class="card-label">Culinary &amp; Spirits Tour</span></div>
+      <div class="card-body">
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">1</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">11am — Lunch</div>
+            <div class="stop-name">The VIG Old Town</div>
+            <div class="stop-addr">1527 N Wells St &nbsp;·&nbsp; Opens 11am</div>
+            <div class="stop-desc">4.7★ neighborhood restaurant and bar. Moroccan turkey burger, lobster deviled eggs, the steak sandwich. Strong cocktails, bar TVs, and a crowd that's been coming for years. The best Wells Street lunch.</div>
+            <div class="stop-badges"><span class="badge b-lunch">🍽 Lunch</span><span class="badge b-tv">📺 TVs</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">2</div><div class="stop-line"></div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">1:30pm</div>
+            <div class="stop-name">The Rabbit Hole</div>
+            <div class="stop-addr">1208 N Wells St</div>
+            <div class="stop-desc">Old Town neighborhood bar with "a ton of TVs" per every regular who reviews it. Solid craft beer, Jenga at every table, a genuinely local crowd. Walk south on Wells — the best pure game-watching stop across all four routes.</div>
+            <div class="stop-badges"><span class="badge b-tv">📺 Best game-watching</span></div>
+          </div>
+        </div>
+        <div class="stop">
+          <div class="stop-track"><div class="stop-circle">3</div></div>
+          <div class="stop-body">
+            <div class="stop-kicker">3pm</div>
+            <div class="stop-name">LUXBAR</div>
+            <div class="stop-addr">18 E Bellevue Pl, Gold Coast</div>
+            <div class="stop-desc">Upscale Gold Coast bar/restaurant, 4.5★. Multiple TVs, outstanding burgers, sophisticated crowd. The perfect transition stop from Old Town into the Gold Coast shopping district and Oak Street. Sets the tone.</div>
+            <div class="stop-badges"><span class="badge b-tv">📺 TVs</span><span class="badge b-star">⭐ Gold Coast</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🛍</span><span class="card-label">Shopping · two distinct districts</span></div>
+      <div class="card-body">
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Wells Street, Old Town</div><div class="shop-desc">Independent boutiques, home goods, and gift shops between North Ave and Division. Walkable and genuinely local.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Oak Street, Gold Coast</div><div class="shop-desc">Chicago's luxury corridor. Hermès, Chanel, St. John Knits, Intermix, Prada. Two concentrated blocks between Michigan and Rush.</div></div></div>
+        <div class="shop-row"><div class="shop-bullet"></div><div><div class="shop-name">Michigan Ave · Magnificent Mile</div><div class="shop-desc">Holiday window displays, city lights, and department stores. December on the Mag Mile is iconic Chicago. Nordstrom, Bloomingdale's, Water Tower Place.</div></div></div>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-top"><span class="card-icon">🎯</span><span class="card-label">Activities</span></div>
+      <div class="card-body">
+        <div class="activity-primary">
+          <div class="act-head"><span class="act-type-tag">Featured activity</span></div>
+          <div class="act-body">
+            <div class="act-name">Kings Dining &amp; Entertainment</div>
+            <div class="act-addr">1500 N Clybourn Ave, Old Town / Lincoln Park</div>
+            <div class="act-desc">Bowling, duckpin bowling, bocce ball, and an arcade all under one roof with a full bar, food menu, and sports TVs. A natural extension of the Wells Street bar route — competitive, social, and perfect for a mixed group. The entertainment continues well past the third drink.</div>
+          </div>
+          <div class="act-meta">
+            <div class="meta-row"><span class="meta-key">Hours</span><span>Opens 11:30am Saturday — fits the 11am–4pm window perfectly</span></div>
+            <div class="meta-row"><span class="meta-key">Reserve</span><span>kingsde.com — book lanes in advance, popular on Saturdays</span></div>
+          </div>
+        </div>
+        <div class="bonus-row"><div class="bonus-dot"></div><div>
+          <div class="bonus-name">Museum of Contemporary Art <span class="badge b-bonus" style="vertical-align:middle;margin-left:6px">✦ Bonus</span></div>
+          <div class="bonus-addr">220 E Chicago Ave &nbsp;·&nbsp; $22 &nbsp;·&nbsp; Open Sat 10am–5pm &nbsp;·&nbsp; 5-min walk from LUXBAR</div>
+          <div class="bonus-desc">A five-minute walk from LUXBAR. One of the better contemporary art museums in the country — 4.4★, 6,500+ reviews. Immersive exhibits, engaging curation. Trade bowling shoes for gallery floors if the group wants a refined close to the afternoon.</div>
+        </div></div>
+      </div>
+    </div>
+    <div class="xmas-note">
+      <div class="xmas-note-icon">🎄</div>
+      <div class="xmas-note-text"><strong>December note:</strong> Michigan Ave and Oak Street are at their absolute best in December — city-funded light installations and department store window displays. <strong>Christkindlmarket</strong> at Daley Plaza runs through Dec 24 — a short Uber from Gold Coast for mulled wine and strudel.</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider">★ &nbsp; Partner Spotlight &nbsp; ★</div>
+
+<!-- PARTNER SPOTLIGHT -->
+<div class="partner-section" id="partners">
+  <div class="partner-grid">
+
+    <!-- LEYE / R.J. Melman -->
+    <div class="partner-card leye">
+      <div class="partner-card-head">
+        <div class="partner-card-eyebrow">YPO Member Spotlight</div>
+        <div class="partner-card-name">Lettuce Entertain You</div>
+        <div class="partner-card-role">Lettuce Entertain You Restaurants &nbsp;·&nbsp; Founded 1971, Chicago</div>
+      </div>
+      <div class="partner-card-body">
+        <div class="ypo-callout">
+          <span class="ypo-callout-star">★</span>
+          <span class="ypo-callout-text">R.J. Melman &nbsp;·&nbsp; YPO Chicago Chapter &nbsp;·&nbsp; Executive Committee Member &nbsp;·&nbsp; Chapter Chair 2020–2021</span>
+        </div>
+        <div class="partner-facts">
+          <div class="partner-fact"><span class="fact-label">Founded</span><span class="fact-value">1971 by Richard Melman &amp; Jerry Orzoff in Chicago</span></div>
+          <div class="partner-fact"><span class="fact-label">Scale</span><span class="fact-value">100+ restaurants &nbsp;·&nbsp; 60+ unique concepts nationwide</span></div>
+          <div class="partner-fact"><span class="fact-label">Structure</span><span class="fact-value">Privately held, family-owned</span></div>
+          <div class="partner-fact"><span class="fact-label">Markets</span><span class="fact-value">IL, FL, MD, MN, NV, TX, VA, DC — and expanding</span></div>
+        </div>
+        <div class="partner-highlights">
+          <div class="partner-highlights-label">Lincoln Park stops on today's route</div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>Café Ba-Ba-Reeba — 2024 N Halsted St (tapas, since 1982)</div></div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>R.J. Grunts — 2056 N Lincoln Ave (the very first Lettuce restaurant, 1971)</div></div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>Summer House Santa Monica — 1954 N Halsted St (California-casual)</div></div>
+        </div>
+        <div class="partner-bio" style="margin-top:16px">
+          <p>R.J. Melman joined Lettuce full time in 2001, was named President in 2017, and became CEO in January 2025 — succeeding Kevin Brown. His father Richard Melman, the company founder, said of the promotion: "When I look at R.J., it solidifies my belief in Lettuce's future."</p>
+          <p>Throughout his tenure R.J. and his partners have opened more than 25 of Lettuce's most notable concepts, including RPM Italian, RPM Steak, Aba, Sushi-san, Summer House, Three Dots and a Dash, and Bub City. Under his leadership Lettuce has expanded to Austin, Miami, Orlando, Nashville, and Dallas.</p>
+          <p>In 2023 R.J. was selected as one of EY's Entrepreneur of the Year® National winners. He and his partners also founded the Windy City Smokeout, Chicago's award-winning country music and BBQ festival. He resides in Chicago with his wife Kate and their two children.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cubs / Tom Ricketts -->
+    <div class="partner-card cubs">
+      <div class="partner-card-head">
+        <div class="partner-card-eyebrow">YPO Member Spotlight</div>
+        <div class="partner-card-name">Chicago Cubs</div>
+        <div class="partner-card-role">Major League Baseball &nbsp;·&nbsp; Founded 1876 &nbsp;·&nbsp; Wrigley Field</div>
+      </div>
+      <div class="partner-card-body">
+        <div class="ypo-callout">
+          <span class="ypo-callout-star">★</span>
+          <span class="ypo-callout-text">Tom Ricketts &nbsp;·&nbsp; YPO Member &nbsp;·&nbsp; Chicago Chapter</span>
+        </div>
+        <div class="partner-facts">
+          <div class="partner-fact"><span class="fact-label">Acquired</span><span class="fact-value">October 2009 by the Ricketts family &nbsp;·&nbsp; ~$900M transaction</span></div>
+          <div class="partner-fact"><span class="fact-label">Home</span><span class="fact-value">Wrigley Field, 1060 W Addison St &nbsp;·&nbsp; Built 1914</span></div>
+          <div class="partner-fact"><span class="fact-label">Trophy</span><span class="fact-value">2016 World Series Champions — ending a 108-year drought</span></div>
+          <div class="partner-fact"><span class="fact-label">Entities</span><span class="fact-value">Wrigley Field &nbsp;·&nbsp; Marquee Network &nbsp;·&nbsp; Marquee Development &nbsp;·&nbsp; Marquee Ventures</span></div>
+        </div>
+        <div class="partner-highlights">
+          <div class="partner-highlights-label">On today's Wrigleyville route</div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>Wrigley Field Ballpark Tour — dugout, ivy, press box (10am)</div></div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>Christkindlmarket at Gallagher Way — walk from the park (free)</div></div>
+          <div class="highlight-item"><div class="highlight-dot"></div><div>Named SBJ &amp; Baseball America Organization of the Year 2016</div></div>
+        </div>
+        <div class="partner-bio" style="margin-top:16px">
+          <p>Tom Ricketts led his family's acquisition of the Chicago Cubs in 2009 in a ~$900 million transaction from the Tribune Company. When introduced as Chairman he outlined three goals: win the World Series, preserve and improve Wrigley Field for future generations, and be a good neighbor to Chicago's North Side. All three have been accomplished.</p>
+          <p>The Cubs won the 2016 World Series, ending a 108-year championship drought. Tom oversaw a landmark renovation of Wrigley Field, one of the most celebrated ballpark projects in MLB history. He was named Sports Business Journal Executive of the Year in 2017.</p>
+          <p>Beyond baseball, Tom is Chairman of InspereX. He holds an AB and MBA from the University of Chicago — where he spent his college years in the Wrigley Field bleachers. He and his wife Cecelia (they met at Wrigley Field) live in the Chicago area with their five children.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<footer>
+  <div class="footer-ornament">🎄 &nbsp; ✦ &nbsp; 🎄</div>
+  <div class="footer-title">Western Michigan YPO — Holiday Party 2026</div>
+  <p>Saturday, December 5, 2026 &nbsp;·&nbsp; Chicago, Illinois<br>
+  All bar and restaurant hours should be confirmed in advance. Wrigley Field tours and WhirlyBall sessions require advance reservations. Lincoln Park Zoo is free — no ticket required. Kings Dining &amp; Entertainment lane reservations recommended.</p>
+</footer>
+</body>
+</html>
